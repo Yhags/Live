@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+    * {
+  margin: 0;
+  padding: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Varela Round', sans-serif;
+  overflow-x:hidden;
+  overflow-y:hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  -ms-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+body .container section:nth-of-type(1) {
+  background-color: rgb(55, 55, 211);
+  color: #02cc02;
+}
+
+body .container section:nth-of-type(2) {
+  background-color: rgb(47, 43, 83);
+  color: #4242ff;
+}
+
+body .container section:nth-of-type(3) {
+  background-color: rgb(23, 23, 85);
+  color: yellow;
+}
+
+
+.navbar {
+  background-color: #f18e8e;
+  height: 100%;
+  width: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.navbar li{
+  list-style-type: none;
+}
+
+.navbar a{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  padding-top: 20px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.img{
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+    text-align: center;
+
+}
+.hide{
+  display: none;
+}
+
+.img:hover{
+  width: 30px;
+  height: 30px;
+}
+
+.imgone{
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+    text-align: center;
+}
+
+.imgone:hover{
+  width: 30px;
+  height: 30px;
+}
+
+.imgone:hover+.hide{
+  color: black;
+  display: block;
+  font-size: 15px;
+  z-index: 1;
+}
+    
+    
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#One"><img class="imgone" src="img/home.png"></a>
+                    <a href="#Two"><img class="img" src="img/hearth.png"></a>
+                    <a href="#Three"><img class="img" src="img/q mark.png"></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <p class="hide">Home</p>
+    <div class="container">
+
+        
+
+        <section id="One">
+            <p>PAGE ONE</p>
+        </section>
+
+        <section id="Two">
+            PAGE TWO
+        </section>
+
+        <section id="Three">
+            PAGE THREE
+        </section>
+
+    </div>
+
+</body>
+</html>
